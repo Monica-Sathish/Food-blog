@@ -1,0 +1,293 @@
+﻿<!DOCTYPE html>
+<html>
+<title>Billing</title>
+<head>
+<style>
+body {
+  font-family: Arial;
+  font-size: 17px;
+  padding: 8px;
+}
+button{
+ border:5px solid #e4e4eb;
+ color:white;
+ margin-left:550px;
+ font-size:30px;
+ background-color: #080f5e;
+ padding:20px;
+ display:inline-block;
+ text-align:center;
+ font-family:verdana;
+ text-decoration:none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap; 
+  flex-wrap: wrap;
+  margin: 0 -16px;
+}
+
+.col-25 {
+  -ms-flex: 25%;
+  flex: 25%;
+}
+
+.col-50 {
+  -ms-flex: 50%;
+  flex: 50%;
+}
+
+.col-75 {
+  -ms-flex: 75%; 
+  flex: 75%;
+}
+
+.col-25,
+.col-50,
+.col-75 {
+  padding: 0 16px;
+}
+
+.container {
+  background-color: #f2f2f2;
+  padding: 5px 20px 15px 20px;
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+}
+
+input[type=text] {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+label {
+  margin-bottom: 10px;
+  display: block;
+}
+
+.icon-container {
+  margin-bottom: 20px;
+  padding: 7px 0;
+  font-size: 24px;
+}
+
+.btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  width: 100%;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+.btn:hover {
+  background-color: #45a049;
+}
+
+a {
+  color: #2196F5;
+}
+
+hr {
+  border: 1px solid lightgrey;
+}
+
+span.price {
+  float: right;
+  color: grey;
+}
+
+  .row {
+    flex-direction: column-reverse;
+  }
+  .col-25 {
+    margin-bottom: 20px;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="row">
+  <div class="col-75">
+    <div class="container">
+      <form>
+
+        <div class="row">
+          <div class="col-50">
+            <h5>Billing Address</h5>
+            <label for="fname"><i class="fa fa-user"></i> Full Name</label>
+            <input type="text" id="fname" name="firstname"placeholder="Enter Full Name">
+            <label for="email"><i class="fa fa-envelope"></i> Email</label>
+            <input type="text" id="email" name="email" placeholder="Enter E-mail">
+            <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
+            <input type="text" id="adr" name="address" placeholder="Enter Address">
+            <label for="city"><i class="fa fa-institution"></i> City</label>
+            <input type="text" id="city" name="city" placeholder="Enter City">
+
+            <div class="row">
+              <div class="col-50">
+                <label for="state">State</label>
+                <input type="text" id="state" name="state" placeholder="Enter State">
+              </div>
+              <div class="col-50">
+                <label for="Pincode">Pincode</label>
+                <input type="text" id="zip" name="zip" maxlength="6"  placeholder="Enter Pincode">
+              </div>
+            </div>
+          </div>
+
+          <div class="col-50">
+            <h5>Payment</h5>
+                 <label for="cname">Name on Card</label>
+            <input type="text" id="cname" name="cardname" placeholder="Enter Your Name">
+            <label for="ccnum">Credit card text</label>
+            <input type="text" id="ccnum" name="cardtext" maxlength="16" placeholder="1111-2222-5555-4444">
+            <label for="expmonth">Exp Month</label>
+            <input type="text" id="expmonth" name="expmonth" maxlength="2" placeholder="Enter Exp Month">
+            <div class="row">
+              <div class="col-50">
+                <label for="expyear">Exp Year</label>
+                <input type="text" id="expyear" name="expyear" maxlength="4" placeholder="Enter Exp Year">
+              </div>
+              <div class="col-50">
+                <label for="cvv">CVV</label>
+                <input type="text" id="cvv" name="cvv"  maxlength="3" placeholder="Enter CVV">
+              </div>
+            </div>
+          </div>
+          
+        </div>
+        <label>
+          <input type="checkbox"  checked="checked" name="sameadr"> Shipping address same as billing
+        </label>
+<p>Choose Your Dish from below</p>
+    <input type="checkbox"  value="Idli">Idli (2 Pcs)
+<input id="numb">
+<br><br>
+     <input type="checkbox"  value="Idli">Idli Vada (2 Idli, 1Vada)
+<input id="numb">
+<br><br>
+     <input type="checkbox"  value="Idli">Idli Upma
+<input id="numb">
+<br><br>
+     <input type="checkbox"  value="Idli">Idli Fry
+<input id="numb">
+<br><br>
+     <input type="checkbox"  value="Idli">Mini Idli
+<input id="numb">
+<br><br>
+     <input type="checkbox"  value="Vada">Sambhar Vada (2 Pcs)
+<input id="numb">
+<br><br>
+     <input type="checkbox"  value="Vada">Curd Vada (2 Pcs)
+<input id="numb">
+<br><br>
+     <input type="checkbox"  value="Vada">Rasam Vada(2 Pcs)
+<input id="numb">
+<br><br>
+ <input type="checkbox"   value="Roast Dosa">Roast Dosa
+<input id="numb">
+<br><br>
+ <input type="checkbox"   value="Roast Dosa">Ghee Roast Dosa
+<input id="numb">
+<br><br>
+ <input type="checkbox"   value="Roast Dosa">Masala Roast Dosa
+<input id="numb">
+<br><br>
+ <input type="checkbox"   value="Roast Dosa">Ghee Masala Roast Dosa
+<input id="numb">
+<br><br>
+ <input type="checkbox"   value="Roast Dosa">Butter Masala Roast Dosa
+<input id="numb">
+<br><br>
+ <input type="checkbox"   value="Roast Dosa">Onion Roast Dosa
+<input id="numb">
+<br><br>
+ <input type="checkbox"   value="Roast Dosa">Ghee Onion Roast Dosa
+<input id="numb">
+<br><br>
+ <input type="checkbox"   value="Roast Dosa">Podi Roast Dosa
+<input id="numb">
+<br><br>
+ <input type="checkbox"   value="Roast Dosa">Rava Roast Dosa
+<input id="numb">
+<br><br>
+ <input type="checkbox"   value="Roast Dosa">Onion Rava Roast Dosa
+<input id="numb">
+<br><br>
+ <input type="checkbox"   value="Roast Dosa">Rava Masala Roast Dosa
+<input id="numb">
+<br><br>
+ <input type="checkbox"   value="Roast Dosa">Ghee Rava Masala Roast Dosa
+<input id="numb">
+<br><br>
+ <input type="checkbox"   value="Uttapam">Uttapam
+<input id="numb">
+<br><br>
+<input type="checkbox"  value="Uttapam">Ghee Uttapam
+<input id="numb">
+<br><br>
+<input type="checkbox"   value="Uttapam">Onion Uttapam
+<input id="numb">
+<br><br>
+<input type="checkbox"  value="Uttapam">Podi Uttapam
+<input id="numb">
+<br><br>
+<input type="checkbox"  value="Poori">Poori with Masala
+<input id="numb">
+<br><br>
+<input type="checkbox"   value="Pongal">Pongal
+<input id="numb">
+<br><br>
+<input type="checkbox"  value="Idhiyappam">Idhiyappam with Coconut Milk
+<input id="numb">
+<br><br>
+<input type="checkbox"  value="Idhiyappam">Idhiyappam with Stew
+<input id="numb">
+<br><br>
+<input type="checkbox"  value="Parota">Parota
+<input id="numb">
+<br><br>
+<input type="checkbox"  value="Noodles">Noodles
+<input id="numb">
+<br><br>
+<input type="checkbox"  value="Naan">Naan
+<input id="numb">
+<br><br>
+<input type="checkbox"  value="chappati">Chappati
+<input id="numb">
+<br><br>
+<input type="checkbox"  value="Upma">Rava Upma
+<input id="numb">
+<br><br>
+<input type="checkbox"  value="Upma">Semia Upma
+<input id="numb">
+<br><br>
+<input type="checkbox"  value="Upma">Wheat Upma
+<input id="numb">
+<br><br> 
+<br>
+<p>Confirm Your Order By Clicking Submit Button.</p>
+<button><a href="C:\Users\monica\Desktop\Food Blog\oops.html">Submit</a></button>
+   </form>
+      
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
